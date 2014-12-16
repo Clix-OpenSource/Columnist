@@ -3,7 +3,7 @@
     namespace Clix\Columnist;
 
     use Illuminate\Support\ServiceProvider;
-    use Illuminate\Foundation\AliasLoader;
+    use Clix\Columnist\View\LaravelView;
 
     class ColumnistServiceProvider extends ServiceProvider
     {
@@ -13,17 +13,16 @@
 
         public function register()
         {
-            // TODO: Implement register() method.
-        }
 
-        public function boot()
-        {
-            $this->package("clix/columnist");
+            $this->app->singleton('columnist', function () {
+                return new Columnist(new LaravelView());
+            });
+
         }
 
         public function provides()
         {
-            return array();
+            return ['columnist'];
         }
 
     }

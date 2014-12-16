@@ -2,12 +2,22 @@
 
     namespace Clix\Columnist;
 
+    use Clix\Columnist\Contracts\View;
+
     class Columnist
     {
-        public $test = "Hello";
 
-        public function test()
+        private $view;
+
+        function __construct(View $view)
         {
-            return $this->test;
+            $this->view = $view;
         }
+
+
+        public function createPage($pageName)
+        {
+            return $pageName;
+        }
+
     }
