@@ -1,0 +1,19 @@
+{
+    "name": "clix/columnist",
+    "description": "Open Source CMS system for Laravel 5",
+    "authors": [
+        {
+            "name": "Simon Skinner",
+            "email": "s.skinner@clix.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Clix\\Columnist": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
