@@ -19,7 +19,6 @@
         public function boot()
         {
             $this->package("clix/columnist");
-            AliasLoader::getInstance()->alias('Columnist', 'Clix\Columnist\Columnist');
         }
 
         public function provides()
