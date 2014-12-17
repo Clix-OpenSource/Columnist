@@ -1,6 +1,8 @@
 <?php namespace Clix\Columnist\View;
 
-    class LaravelView implements \Clix\Columnist\Contracts\View
+    use Clix\Columnist\Contracts\View;
+
+    class LaravelView implements View
     {
 
         protected $variables;

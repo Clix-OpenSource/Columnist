@@ -2,6 +2,7 @@
 
     namespace Clix\Columnist;
 
+    use Clix\Columnist\Database\LaravelDatabase;
     use Illuminate\Support\ServiceProvider;
     use Clix\Columnist\View\LaravelView;
 
@@ -15,7 +16,7 @@
         {
 
             $this->app->singleton('columnist', function () {
-                return new Columnist(new LaravelView());
+                return new Columnist(new LaravelView(), new LaravelDatabase());
             });
 
         }
